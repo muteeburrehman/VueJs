@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Vue Course Goals</h1>
+    </header>
+    <!-- Section is the html part that is control by 'Vue' -->
+    <section id="user-goal">
+      <h2>My Course Goal</h2>
+      <!-- <p>{{ courseGoal }}</p> -->
+      <!-- You can use different javascript expressions in double paranthesis but not conditions i.e if,else  -->
+      <!-- interplation -->
+      <p>{{outputGoal()}}</p>
+      <!-- <p v-html="outputGoal()"></p> -->
+      <!-- with 'v-html' you can tell vue that the content should be interpreted as html -->
+      <!-- We use 'v-bind' directive in this case to add extra info in html tag.
+     'v-bind' bind the value of that specific value of javascript object with that specific html tag.
+      simply we  can say its a bind to html data -->
+      <!-- binding -->
+      <p>Learn more <a v-bind:href="vueLink">about Vue</a></p>
+    </section>
+  </body>
+</html>
