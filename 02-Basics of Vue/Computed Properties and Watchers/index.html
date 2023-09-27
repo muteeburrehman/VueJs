@@ -18,9 +18,19 @@
     </header>
     <section id="events">
       <h2>Events in Action</h2>
-      <button v-on:click="counter++">Add</button>
-      <button v-on:click="counter--">Remove</button>
+      <!-- we can also use v-on:click as @click -->
+      <!-- also v-bind:value can also be written as ':' -->
+      <button v-on:click="add(10)">Increment 10</button>
+      <button v-on:click="reduce(5)">Decrement 5</button>
+     
       <p>Result: {{ counter }}</p>
+
+      <input type="text" v-model="name">
+      <input type="text" v-model="lastName">
+      <button v-on:click="ResetInput">Reset Input</button>
+      <p>Your Name: {{fullName}}</p>
+      <!-- We use computed properties like data properties(not like functions) and Vue will call it for us  -->
+    
     </section>
   </body>
 </html>
